@@ -1,6 +1,14 @@
-import {Entity, PrimaryColumn, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, OneToMany, ManyToOne} from "typeorm";
+import {Entity, 
+    PrimaryColumn, 
+    PrimaryGeneratedColumn, 
+    Column, 
+    ManyToMany, 
+    JoinTable, 
+    ManyToOne
+} from "typeorm";
 import { User } from "./User.entity";
 import { Component } from "./Component.entity";
+import { Lesson } from "./Lesson.entity";
 
 @Entity()
 export class Course {
@@ -32,4 +40,7 @@ export class Course {
     @ManyToOne(type => Component)
     component : Promise<Component>
 
+    @ManyToMany(type => Lesson)
+    @JoinTable({name : "Lesson_has_course"})
+    lesson : Promise<Lesson>
 }
