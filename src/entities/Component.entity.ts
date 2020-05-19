@@ -1,4 +1,10 @@
-import {Entity, PrimaryGeneratedColumn, Column, ManyToMany, JoinTable, OneToMany} from "typeorm";
+import {Entity, 
+    PrimaryGeneratedColumn, 
+    Column, 
+    ManyToMany, 
+    JoinTable, 
+    OneToMany
+} from "typeorm";
 import { Course } from "./Course.entity";
 
 @Entity()

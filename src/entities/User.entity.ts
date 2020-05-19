@@ -7,14 +7,14 @@ import { Entity,
     ManyToMany,
     JoinTable
 } from "typeorm";
-import {TypeUser} from 'src/enums/TypeUser.enum'
+import {TypeUser} from "src/enums/TypeUser.enum";
 import { Course } from "./Course.entity";
 
 @Entity()
 export class User {
 
     @PrimaryGeneratedColumn("uuid")
-    protected id : String;
+    protected id : String
 
     @Column({
         type : "varchar",
